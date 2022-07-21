@@ -29,7 +29,7 @@
 <button class="btn btn-secondary mb-3" type="button" id="clear-history-button">Clear search</button>
 <form id="clear-history"></form>
 
-    <!--Current city and weather stats conainer-->
+    <!--Current city and weather stats-->
 <div class="col-lg">
   <div class="row mr-0">
     <div class="col-lg-11 card m-3 .d-sm-none .d-md-block" id="todays-weather"><p>todaysweather</p>
@@ -38,21 +38,27 @@
         <p id="temperature"></p>
         <p id="humidity"></p>
         <p id="wind-speed"></p>
+        <p id="uv-index"></p>
       </div>
     </div>
   </div>
 </div>
 
+<div class="row d-none .d-sm-none .d-md-block" id="days-header">
+  <div class="col-12">
+      <h3>5-Day Forecast</h3>
 <div class="list-container-fluid">
   <div class="location-date"></div>
       <div class="row row-cols-4">
-          <div class="col">Column</div>
-          <div class="col">Column</div>
-          <div class="col">Column</div>
-          <div class="col">Column</div>
-          <div class="col">Column</div>
-</div>
+          <div class="col" id="date">Column</div>
+          <div class="col" id="icon">Column</div>
+          <div class="col" id="temp">Column</div>
+          <div class="col" id="wind-speed">Column</div>
+          <div class="col" id="humidity">Column</div>
+        </div>
+      </div>
     </div>
+  </div>
     
     
     
