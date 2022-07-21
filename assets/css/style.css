@@ -14,6 +14,14 @@ body{
  padding: 10px;
 }
 
+.list-container-fluid {
+    margin: 0 9rem;
+    background-color: white;
+    height: 45vh;
+    margin: 50px auto;
+    border-radius: 2px;
+}
+
 .input-group mb-3 {
         padding: 2rem 0 2rem 0;
         text-align: center;
