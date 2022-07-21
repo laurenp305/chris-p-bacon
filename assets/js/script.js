@@ -7,9 +7,9 @@ function init() {
     let currentHumidityEl = document.getElementById("humidity");
     let currentWindEl = document.getElementById("wind-speed");
     let currentUVEl = document.getElementById("UV-index");
-    let historyEl = document.getElementById("clear-history");
-    var fivedayEl = document.getElementById("days-header");
-    var todayweatherEl = document.getElementById("todays-weather");
+    let clearHistoryEl = document.getElementById("clear-history");
+    var daysHeaderEl = document.getElementById("days-header");
+    var todayWeatherEl = document.getElementById("todays-weather");
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
     //API
     const apiKey = "84b79da5e5d7c92085660485702f4ce8";
