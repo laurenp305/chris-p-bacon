@@ -24,9 +24,11 @@
           <div class="col-lg-3 bg-light">
               <h5 class="mt-1">Search for a City:</h5>
               <div class="input-group mb-3">
+                <form>
                   <input id="search-city" type="text" class="form-control" placeholder="Search for a city" aria-label="Search for a city">
                   <div class="search-query">
                     <button type="button" class="btn btn-primary" id="search-button"><i class="fa fa-search"></i></button>
+                  </form>
                   </div>
                 </div>
               </div>
@@ -42,6 +44,7 @@
     <div class="col-lg-11 card m-3 .d-sm-none .d-md-block" id="todays-weather"><p>todays weather</p>
       <div class="card">
         <h3 id="city-name" class="city-name align-middle"></h3>
+        <img id="current-picture" alt="">
         <p id="temperature"></p>
         <p id="humidity"></p>
         <p id="wind-speed"></p>

@@ -16,8 +16,23 @@ function init() {
 
 // WHEN I search for a city
 // THEN I am presented with current and future conditions for that city and that city is added to the search history
-
-
+function getWeather(cityName) {
+    const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
+    fetch(queryURL)
+    .then(response => response.json())
+    .then(data => console.log(data));
+    let todaysDate = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0');
+    let yy = today.getFullYear();
+    nameEl.innerHTML = response.data.name + " (" + month + "/" + day + "/" + year + ") ";
+    let weatherPic = response.data.weather[0].icon;
+    currentPicEl.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
+    currentPicEl.setAttribute("alt", response.data.weather[0].description);
+    currentTempEl.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " &#176F";
+    currentHumidityEl.innerHTML = "Humidity: " + response.data.main.humidity + "%";
+    currentWindEl.innerHTML = "Wind Speed: " + response.data.wind.speed + " MPH";
+}
 
 // WHEN I view current weather conditions for that city
 // THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
