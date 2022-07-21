@@ -29,14 +29,15 @@
                   <div class="search-query">
                     <button type="button" class="btn btn-primary" id="search-button"><i class="fa fa-search"></i></button>
                   </form>
+                  <!--Added clear search button-->
+<button class="btn btn-secondary" type="button" id="clear-history-button">Clear search</button>
+<form id="clear-history"></form>
                   </div>
                 </div>
               </div>
             </div>
 
-<!--Added clear search button-->
-<button class="btn btn-secondary mb-3" type="button" id="clear-history-button">Clear search</button>
-<form id="clear-history"></form>
+
 
     <!--Current city and weather stats-->
 <div class="col-lg">
@@ -44,7 +45,7 @@
     <div class="col-lg-11 card m-3 .d-sm-none .d-md-block" id="todays-weather"><p>todays weather</p>
       <div class="card">
         <h3 id="city-name" class="city-name align-middle"></h3>
-        <img id="current-picture" alt="">
+        <p id="cityoutput"></p>
         <p id="temperature"></p>
         <p id="humidity"></p>
         <p id="wind-speed"></p>
