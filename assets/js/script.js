@@ -15,10 +15,12 @@ displayWeather: function (data) {
     const {icon, description} = data.weather[0];
     const {temp, humidity} = data.main;
     const {speed} = data.wind;
-    document.getElementById("#city-name");
-    document.getElementById("#icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
-    document.getElementById("#temperature").innerText = temp + "°F";
-    
+    document.querySelector(".city-name");
+    document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+    document.querySelector(".temperature").innerText = temp + "°F";
+    document.querySelector(".humidity").innerText= "Humidity: " + humidity + "%";
+    document.querySelector(".wind-speed").innerText = "Wind speed: " + speed + " km/h";
+    document.querySelector(".uv-index").innerText = "UV Index: " + uv;
 }
 
 
