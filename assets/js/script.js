@@ -21,6 +21,9 @@ displayWeather: function (data) {
     document.querySelector(".humidity").innerText= "Humidity: " + humidity + "%";
     document.querySelector(".wind-speed").innerText = "Wind speed: " + speed + " MPH";
     document.querySelector(".uv-index").innerText = "UV Index: " + uv;
+},
+search: function () {
+    this.fetchWeather(document.querySelector("."))
 }
 
 

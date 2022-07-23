@@ -33,3 +33,7 @@ body{
 .row h3 {
     color: white;
 }
+
+.button {
+    border-radius: 10px;
+}
