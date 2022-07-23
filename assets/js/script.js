@@ -4,17 +4,27 @@ let weather = {
         fetch("https://api.openweathermap.org/data/2.5/weather?q="+ city + "&appid=" + this.apiKey)
         .then((response) => {
             if (!response.ok) {
-                alert("Are you sure that's a city?")
+                alert("Are you sure that's a city?");
             }
-        }
-    }
-
+            return response.json();
+        })
+        .then((data) => this.displayWeather(data));
+    },
+displayWeather: function (data) {
+    const {name} = data; 
+    const {icon, description} = data.weather[0];
+    const {temp, humidity} = data.main;
+    const {speed} = data.wind;
+    document.getElementById("#city-name");
+    document.getElementById("#icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+    document.getElementById("#temperature").innerText = temp + "°F";
+    
 }
 
 
 
 
-
+}
 // WHEN I search for a city
 // THEN I am presented with current and future conditions for that city and that city is added to the search history
 
@@ -29,6 +39,6 @@ let weather = {
 
 // WHEN I click on a city in the search history
 // THEN I am again presented with current and future conditions for that city
-}
+
 
 
