@@ -1,19 +1,19 @@
-function init() {
-    let cityEl = document.getElementById("search-city");
-    let searchEl = document.getElementById("search-button");
-    let clearEl = document.getElementById("clear-history-button");
-    let nameEl = document.getElementById("city-name");
-    let currentPictureEl = document.getElementById("current-picture");
-    let currentTempEl = document.getElementById("temperature");
-    let currentHumidityEl = document.getElementById("humidity");
-    let currentWindEl = document.getElementById("wind-speed");
-    let currentUVEl = document.getElementById("UV-index");
-    let clearHistoryEl = document.getElementById("clear-history");
-    var daysHeaderEl = document.getElementById("days-header");
-    var todayWeatherEl = document.getElementById("todays-weather");
-    let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
-    //API
-    const apiKey = "84b79da5e5d7c92085660485702f4ce8";
+let weather = {
+    apiKey: "84b79da5e5d7c92085660485702f4ce8";
+    fetchWeather: function (city) {
+        fetch("https://api.openweathermap.org/data/2.5/weather?q="+ city + "&appid=" + this.apiKey)
+        .then((response) => {
+            if (!response.ok) {
+                alert("Are you sure that's a city?")
+            }
+        }
+    }
+
+}
+
+
+
+
 
 // WHEN I search for a city
 // THEN I am presented with current and future conditions for that city and that city is added to the search history
