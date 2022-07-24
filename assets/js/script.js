@@ -81,22 +81,19 @@ function initPage () {
         forecastInfo[i].append(forecastDateEl);
         
         //Weather icon/current pic
-
-
-
-            }
-    }
-            
-
+        const forecastWeatherEl = document.createElement("img");
+        forecastWeatherEl.setAttribute("alt", response.data.list[forecastIndex].dt * 1000);
+        forecastWeatherEl.setAttribute("src", "https://openweathermap.org/img/wn/" + response.data.list[forecastIndex].weather[0].icon + "@2x.png");
+        forecastWeatherEl.setAttribute("alt", response.data.list[forecastIndex].weather[0].description);
+            forecastInfo[i].append(forecastWeatherEl);
+        const forecastTempEl = document.createElement("p");
+            forecastTempEl.innerHTML = "Temperature: " + k2f(response.data.list[forecastIndex].main.temp) + " &#176F";
+            forecastInfo[i].append(forecastTempEl);
+        const forecastHumEl = document.createElement("p");
+            forecastHumEl.innerHTML = "Humidity: " + response.data.list[forecastIndex].main.humidity + "%";
+            forecastInfo[i].append(forecastHumEl);
         }
-    }
-
-
-
-
+    })
+});
 }
-
-
-
-
 
