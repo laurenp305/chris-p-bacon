@@ -67,7 +67,24 @@ function initPage () {
         daysHeader.classList;
 
         //Displays forecast for all of the days 
+        const forecastInfo = document.querySelectorAll(".forecast");
+        for (i = 0; i < forecastInfo.length; i++) {
+            forecastInfo[i].innerHTML = "";
+        const forecastIndex = i * 8 * 4;
+        const forecastCurrentDate = new Date(response.data.list[forecastIndexIndex].dt * 1000);
+        const forecastCurrentDay = forecastCurrentDate.getDate();
+        const forecastCurrentMonth = forecastCurrentDate.getMonth();
+        const forecastCurrentYear = forecastCurrentDate.getFullYear();
+        const forecastDateEl = document.createElement("p");
+        forecastDateEl.setAttribute("class", "mt-3 mb-0 forecast-date");
+        forecastDateEl.innerHTML = forecastCurrentMonth + "/" + forecastCurrentDay + "/" + forecastCurrentYear;
+        forecastInfo[i].append(forecastDateEl);
         
+        //Weather icon/current pic
+
+
+
+            }
     }
             
 
