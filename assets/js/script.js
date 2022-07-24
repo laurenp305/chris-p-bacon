@@ -7,7 +7,8 @@ function initPage () {
     let currentUv = document.getElementById("#uv").innerText = "UV Index: " + uv;
     let searchEl = document.getElementById("#search-button");
     let clearEl = document.getElementById("#clear-history");
-    let todaysWeather = document.getElementById("#todays-weather")
+    let todaysWeather = document.getElementById("#todays-weather");
+    var daysHeader = document.getElementById("days-header");
     let searchHis = JSON.parse(localStorage.getItem)("#search") || [];
 
     //API Key//
@@ -57,7 +58,17 @@ function initPage () {
             currentUv.append(UvIndex);
             });
             
-            
+    //5 day forecast 
+
+    let cityId = response.data.id;
+    let forecastQueryUrl = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityId + "&appid=" + APIKey;
+    fetch(forecastQueryUrl)
+    .then(function (response) {
+        daysHeader.classList;
+
+        //Displays forecast for all of the days 
+        
+    }
             
 
         }
