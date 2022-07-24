@@ -97,3 +97,11 @@ function initPage () {
 });
 }
 
+// Get history from local storage if any
+searchEl.addEventListener("click", function () {
+    const searchTerm = cityName.value;
+    getWeather(searchQuery);
+    searchHis.push(searchQuery);
+    localStorage.setItem("search", JSON.stringify(searchHis));
+    renderSearchHis();
+})
